@@ -61,11 +61,6 @@ TARGET_SCREEN_WIDTH := 1080
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-# Paranoid Glyph
-PRODUCT_PACKAGES += \
-    ParanoidGlyphPhone1 \
-    GlyphAdapter
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -215,6 +210,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/nothing:libudfps_extension.nothing)
 
+# Glyph
+PRODUCT_PACKAGES += \
+    ParanoidGlyph
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
@@ -255,8 +254,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Lights
+$(call soong_config_set,nothing_glyph,device,phone1)
+
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.lineage
+    android.hardware.lights-service.glyph
 
 # Lineage Health
 PRODUCT_PACKAGES += \
