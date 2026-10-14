@@ -46,7 +46,7 @@
     <integer name="config_screenBrightnessDoze">255</integer>
 
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
-    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_touch</string>
+    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_tap</string>
 
     <!-- Minimum color temperature, in Kelvin, supported by display white balance. -->
     <integer name="config_displayWhiteBalanceColorTemperatureMin">4400</integer>

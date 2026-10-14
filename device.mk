@@ -327,6 +327,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
+$(call soong_config_set,nothing_sensors,tp_single_tap_path,/sys/class/spi_master/spi0/spi0.0/fts_gesture_single_tap_pressed)
+$(call soong_config_set,nothing_sensors,tp_udfps_path,/sys/class/spi_master/spi0/spi0.0/fts_gesture_fod_pressed)
+$(call soong_config_set,nothing_sensors,tp_udfps_reports_position,true)
+
 # Telephony
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
